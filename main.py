@@ -1,7 +1,7 @@
 from flask import Flask, request
 app = Flask(__name__)
 
-@app.route('/webhookcallback', methods = ["post"])
+@app.route('/', methods = ["post"])
 def hook():
     print(request.data)
     return "Hello world"
